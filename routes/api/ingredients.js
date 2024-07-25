@@ -9,6 +9,6 @@ router.get('/', async (req, res, next) => {
   res.json({ message: 'template message' })
 })
 
-router.get("/food", jsonParser, fatSecretAuth, ingredientsController.getFood);
+router.post("/food", jsonParser, fatSecretAuth, ingredientsController.getFood);
 
 module.exports = router
